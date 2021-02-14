@@ -26,7 +26,7 @@ public class GitHub {
         // Перейти в Wiki
         $(byText("Wiki")).click();
         //Проверка что в списке страниц (Pages) есть страница SoftAssertions + Откройте страницу SoftAssertions
-        $(byText("SoftAssertions")).shouldHave(text("SoftAssertions")).click();
+        $("#wiki-pages-box").find(byText("SoftAssertions")).click();
         // Проверить что внутри есть пример кода для JUnit5
         $("#wiki-body").shouldHave(text("Using JUnit5 extend test class"));
     }
